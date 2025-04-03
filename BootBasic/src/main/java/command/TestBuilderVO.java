@@ -1,0 +1,51 @@
+package command;
+
+import lombok.Builder;
+import lombok.ToString;
+
+@Builder //빌더패턴의 활성화
+@ToString
+public class TestBuilderVO {
+
+    //빌더패턴이란 - 객체의 불변성을 위해서 사용하는 스프링 애용하는 문법
+    //1.멤버변수
+    private String name;
+    private int age;
+
+//    //3. 외부클래스가 생성될때 내부클래스인 Builder를 매개변수로 받음
+//    private TestBuilderVO(Builder builder) {
+//        this.name = builder.name;
+//        this.age = builder.age;
+//    }
+//    //4. 외부에서 객체생성을 요구할때 bulider메서드를 호출하고록함
+//    public static Builder builder() {
+//        return new Builder(); //내부클래스 반환
+//    }
+//
+//
+//    //2. 내부클래스
+//    public static class Builder {
+//        private String name;
+//        private int age;
+//
+//        //생성자 제한
+//        private Builder() {}
+//
+//        //5. 빌더클래스 에서는 set메서드만 생성하고, 자신을 반환시킴
+//        public Builder name(String name) {
+//            this.name = name;
+//            return this;
+//        }
+//        public Builder setAge(int age) {
+//            this.age = age;
+//            return this;
+//        }
+//
+//        //6. bulider메서드를 호출하면 3번의 호출하면 3번의 생ㅅㅇ자를 통해서 멤버변수를 외부에서 저장시킵니다
+//        public TestBuilderVO build() {
+//            return new TestBuilderVO(this);
+//        }
+//    }
+
+
+}

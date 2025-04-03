@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+  <h3>이 화면에 진입할때 SimpleVO 클래스를 화면에 출력해줍니다</h3>
+  [[${vo}]]
+<pre>
+  SimpleVO는 생성하면 됩니다
+  int 회원번호
+  String 이름
+  LocalDateTime 가입일
+  을 가집니다.
+
+  아래에서 회원정보확인 링크를 만들고 quiz_result?키=값 형태로 (회원번호와 이름)을
+  남겨줍니다.
+  result페이지 에는 회원번호와 이름을 출력해주세요.
+</pre>
+
+
+      <a th:href="@{/view/quiz_result(id=${vo.id}, name=${vo.name} )}">회원정보확인</a>
+
+
+
+
+</body>
+</html>
