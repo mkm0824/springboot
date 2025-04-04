@@ -39,10 +39,7 @@ public class MemoController {
     @PostMapping("/memoForm")
     public String memoForm(@Valid @ModelAttribute("vo") TestVO vo, Model model) {
 
-            if(result.hasErrors()) {
-                return "memo/memoWrite";
 
-            }
 
 
         return "memo/memoList";
